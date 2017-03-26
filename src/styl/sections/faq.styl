@@ -1,0 +1,79 @@
+.faq__title-wrapper
+  background #f3f3f3
+  padding-bottom remify(104)
+  padding-top remify(77)
+  text-align center
+
+.faq__title
+  color #1e2b3e
+
+  &::after
+    background #1e2b3e
+
+.faq__content
+  padding-bottom remify(173)
+  padding-top remify(70)
+
+.faq__content-inner
+  center-block()
+  max-width 1060px
+  width 80%
+  text-align center
+
+  .site-button
+    padding 0.8em 1.6em
+    font-size remify(15)
+    margin-top remify(120)
+
+.faq__items
+  text-align left
+  display flex
+  flex-wrap wrap
+  justify-content space-between
+
+.faq__item
+  flex-basis 42%
+  margin-top remify(57)
+
+.faq__item-title
+  color #808080
+  font-weight normal
+  margin 0
+  font-size 14px
+  position relative
+
+  &::before
+    content ' '
+    background-image url('../img/icons/faq-list-bullet.png')
+    height 26px
+    width 26px
+    display block
+    position absolute
+    left -20px
+    top 0
+    transform translateX(-100%)
+
+.faq__item-content
+  color #262e3d
+  font-size 13px
+  margin-top 14px
+
+  p
+    margin 0
+
+    &:not(:first-child)
+      margin-top 1.1em
+
+@media screen and (max-width: 767px)
+  .faq__content
+    padding-bottom remify(110)
+    padding-top remify(30)
+
+
+
+  .faq__content .site-button
+    margin-top remify(80)
+
+  .faq__item
+    flex-basis 100%
+    padding-left 13%
