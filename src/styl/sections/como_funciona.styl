@@ -1,8 +1,67 @@
 .how-it-works__title-wrapper
   background #323d4e
+  text-align center
+  padding-bottom remify(94)
+  padding-top remify(81)
 
 .how-it-works__title
   color white
 
   &::after
     background white
+
+.how-it-works__content-wrapper
+  display flex
+  flex-wrap wrap
+  align-items center
+  margin-bottom remify(560)
+
+.how-it-works__content
+  flex-basis 50%
+
+.how-it-works__content-text
+  color #262e3d
+  center-block()
+  font-size remify(16)
+  line-height 1.38
+  max-width 581px
+  padding remify(24) remify(30)
+  margin-bottom remify(40)
+  margin-top remify(40)
+  simple-border('all', 1px, #979797)
+  position relative
+  width 90%
+
+  &::before
+    content ' '
+    position absolute
+    right 5%
+    background white
+    height 4px
+    width 9%
+    min-width 30px
+    top -2px
+
+  p
+    margin 0
+
+    &:not(:first-child)
+      margin-top 1.4em
+
+.how-it-works__content-cover
+  align-self stretch
+  background-image url('../img/backgrounds/how-it-works.jpg')
+  flex-basis 50%
+  min-height 28.75vw
+
+@media screen and (max-width: 767px)
+  .how-it-works__content-wrapper
+    margin-bottom 0
+
+  .how-it-works__content,
+  .how-it-works__content-cover
+    flex-basis 100%
+
+  .how-it-works__content-cover
+    height 28.75vw
+    min-height 160px
