@@ -79,3 +79,53 @@
   line-height 1.38
   margin 0
   margin-top remify(20)
+
+.home-how-it-works
+  padding-top remify(85)
+  padding-bottom remify(68)
+
+.home-how-it-works__content
+  center-block()
+  width 90%
+  max-width 914px
+  text-align center
+
+  .site-button
+    font-size remify(15)
+    margin-top remify(50)
+    padding 1.1em 1em
+
+.home-how-it-works__items
+  display flex
+  justify-content space-between
+
+.home-how-it-works__item-square
+  background #233045
+  width remify(156)
+  height remify(156)
+  position relative
+  text-align center
+
+  &::before
+    content ' '
+    height remify(19)
+    width remify(19)
+    simple-border('all', 1px, #aaaaaa)
+    position absolute
+    right remify(43)
+    top remify(-9)
+
+.home-how-it-works__item-icon
+  height remify(75)
+  margin-top remify(39)
+
+.home-how-it-works__item-description
+  display block
+  width remify(140)
+  center-block()
+  text-align center
+  font-size remify(16)
+  text-transform uppercase
+  line-height 1.5
+  letter-spacing remify(1)
+  margin-top remify(27)
