@@ -272,12 +272,16 @@
       padding-top remify(17) !important
 
     .home-benefits__item-text
-      max-width initial !important
+      max-width 340px !important
+      center-block()
 
     .home-benefits__item-icon
       margin-top remify(50) !important
       margin-bottom remify(30) !important
 
+@media screen and (max-width: 767px)
+  .home-benefits__item-content
+    font-size remify(16)
 
 @media screen and (max-width: 650px)
   .home-hero__title
