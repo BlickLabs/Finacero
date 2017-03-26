@@ -38,6 +38,21 @@ a
   @media screen and (max-width: 920px)
     padding-top 65px
 
+.section-title
+  display inline-block
+  font-size remify(40)
+  font-weight normal
+  letter-spacing remify(0.2)
+  text-transform uppercase
+  margin 0
+
+  &::after
+    content ' '
+    display block
+    width remify(66)
+    height 1.5px
+    margin-top remify(32)
+
 // LOADERS //
 .custom-loader
   display none
