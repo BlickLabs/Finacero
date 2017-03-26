@@ -87,6 +87,18 @@ textarea
   resize none
 // END FORMS //
 
+.site-button
+  color white
+  text-transform uppercase
+  letter-spacing 0.0666666em
+  background $buttonBg
+  transition background 0.2s
+
+  &:hover,
+  &:active,
+  &:focus
+    background lightness($buttonBg, 32%)
+
 @import 'partials/navbar'
 
 @import 'partials/footer'
