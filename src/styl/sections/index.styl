@@ -36,3 +36,46 @@
   font-size remify(16)
   letter-spacing remify(1)
   margin-bottom remify(36)
+
+.home-why-us
+  display flex
+  flex-wrap wrap
+
+.home-why-us__cover
+  background-image url('../img/backgrounds/home-why.jpg')
+  flex-basis 38.4%
+  height 28.85vw
+
+.home-why-us__content
+  background #f3f3f3
+  flex-basis 61.6%
+
+.home-why-us__content-inner
+  color #1f2c3f
+  max-width 581px
+  simple-border('all', 1px, #979797)
+  padding remify(33)
+  position relative
+
+  &::before
+    content ' '
+    position absolute
+    right 5%
+    background #f3f3f3
+    height 4px
+    width 8%
+    min-width 30px
+    top -2px
+
+.home-why-us__content-title
+  font-weight $regular
+  margin 0
+  font-size remify(35)
+  letter-spacing remify(1)
+  text-transform uppercase
+
+.home-why-us__content-text
+  font-size remify(16)
+  line-height 1.38
+  margin 0
+  margin-top remify(20)
