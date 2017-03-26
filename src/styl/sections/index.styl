@@ -236,6 +236,15 @@
       display none
       content ''
 
+@media screen and (max-width: 700px)
+  .home-how-it-works__items
+    flex-wrap wrap
+    max-width 340px
+    center-block()
+
+  .home-how-it-works__item:nth-child(n+3)
+    margin-top remify(45)
+
 @media screen and (max-width: 650px)
   .home-hero__title
     font-size remify(30)
