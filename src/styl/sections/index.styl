@@ -216,6 +216,20 @@
   height 38vw
   min-height 200px
 
+@media screen and (max-width: 1221px)
+  .home-benefits__item-title
+    height remify(86)
+
+  .home-benefits__item:not(:last-child) .home-benefits__item-title
+    padding-top remify(28)
+
+  .home-benefits__item:nth-child(3) .home-benefits__item-icon
+    margin-bottom 0
+
+  .home-benefits__item:nth-child(4) .home-benefits__item-icon
+    margin-top remify(25)
+    margin-bottom 0
+
 @media screen and (max-width: 1023px)
   .home-why-us__cover,
   .home-why-us__content
@@ -236,15 +250,64 @@
       display none
       content ''
 
-@media screen and (max-width: 700px)
-  .home-how-it-works__items
+  .home-benefits__items
     flex-wrap wrap
-    max-width 340px
-    center-block()
 
-  .home-how-it-works__item:nth-child(n+3)
-    margin-top remify(45)
+  .home-benefits__item:nth-child(1),
+  .home-benefits__item:nth-child(2),
+  .home-benefits__item:nth-child(3)
+    flex-basis 33.33333%
+
+  .home-benefits__item:nth-child(3) .home-benefits__item-content
+    border none
+
+  .home-benefits__item:nth-child(4),
+  .home-benefits__item:nth-child(5)
+    flex-basis 50%
+    margin-top remify(30)
+
+  .home-benefits__item
+    .home-benefits__item-title
+      height auto !important
+      padding-top remify(17) !important
+
+    .home-benefits__item-text
+      max-width initial !important
+
+    .home-benefits__item-icon
+      margin-top remify(50) !important
+      margin-bottom remify(30) !important
+
 
 @media screen and (max-width: 650px)
   .home-hero__title
     font-size remify(30)
+
+@media screen and (max-width: 635px)
+  .home-benefits__item:nth-child(1),
+  .home-benefits__item:nth-child(2),
+  .home-benefits__item:nth-child(3)
+    flex-basis 50%
+
+  .home-benefits__item:nth-child(3)
+    margin-top remify(30)
+
+  .home-benefits__item:nth-child(2) .home-benefits__item-content,
+  .home-benefits__item:nth-child(4) .home-benefits__item-content
+    border none
+
+  .home-benefits__item:nth-child(3) .home-benefits__item-content
+    simple-border('right', 1px, #979797)
+
+  .home-benefits__item:nth-child(5)
+    flex-basis 100%
+
+@media screen and (max-width: 479px)
+  .home-benefits__item
+    flex-basis 100% !important
+
+    .home-benefits__item-content
+      border none !important
+
+    &:not(:first-child)
+      margin-top remify(30)
