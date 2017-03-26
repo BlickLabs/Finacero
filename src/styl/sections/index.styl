@@ -1,7 +1,7 @@
 .home-hero
   background-image url('../img/backgrounds/home-hero.jpg')
   height calc(95vh - 72px)
-  min-height 350px
+  min-height 400px
 
   @media screen and (orientation: portrait)
     @media screen and (min-height: 400px) and (min-width: 400px)
@@ -9,7 +9,7 @@
 
 .home-hero__inner
   color white
-  width 90%
+  width 86%
 
   .site-button
     padding 0.8em 1.7em
@@ -215,3 +215,27 @@
   background-image url('../img/backgrounds/home-bottom.jpg')
   height 38vw
   min-height 200px
+
+@media screen and (max-width: 1023px)
+  .home-why-us__cover,
+  .home-why-us__content
+    flex-basis 100%
+
+  .home-why-us__cover
+    min-height 150px
+
+  .home-why-us__content
+    order -1
+
+  .home-why-us__content-inner
+    border none
+    padding-bottom remify(60)
+    padding-top remify(60)
+
+    &::before
+      display none
+      content ''
+
+@media screen and (max-width: 650px)
+  .home-hero__title
+    font-size remify(30)
