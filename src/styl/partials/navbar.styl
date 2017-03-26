@@ -1,13 +1,20 @@
 nav
-  background white
+  background transparent
   display flex
   align-items center
-  height 78px // Change
+  height 111px
   left 0
+  padding 0 remify(60)
   position fixed
   top 0
   width 100%
   z-index 12
+
+  &.fixed,
+  &.not-home
+    background-image url('../img/backgrounds/navbar.jpg')
+    background-size cover
+    background-position center
 
   .menu-trigger,
   .mobile-logo-container
@@ -20,24 +27,34 @@ nav
     padding-top remify(5) // Change
 
     img
-      width remify(150) // Change
+      width remify(223) // Change
 
   .menu-container
     flex-grow 1
-    font-size remify(19) // Change
+    font-size 14px
+    letter-spacing 3px
     text-align right
+    text-transform uppercase
     height 100%
 
   .menu
     height 100%
+    display flex
+    align-items center
+    justify-content flex-end
 
   .menu-link
+    color white
     display inline-block
     vertical-align middle
-    line-height 74px // Change
+    simple-border('bottom', 3px, transparent)
+    padding-bottom 4px
 
     &:hover, &.active
-      color white // Change
+      simple-border('bottom', 3px, #9d9d9d)
+
+    &:not(:first-child)
+      margin-left 29px
 
 @media screen and (max-width: 876px) // Change
   nav
