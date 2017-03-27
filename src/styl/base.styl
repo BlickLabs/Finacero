@@ -132,6 +132,31 @@ textarea
     color #283345
 
 
+.inputs-row,
+.input-wrapper
+  width 100%
+
+.inputs-row
+  display flex
+  justify-content space-between
+
+  .input-wrapper
+    width initial
+    flex-basis 48.56%
+
+.input-wrapper .site-input
+  width 100%
+
+.input-wrapper
+  margin-top remify(23)
+
+@media screen and (max-width: 450px)
+  .inputs-row
+    flex-wrap wrap
+
+    .input-wrapper
+      flex-basis 100%
+
 @import 'partials/navbar'
 
 @import 'partials/footer'
