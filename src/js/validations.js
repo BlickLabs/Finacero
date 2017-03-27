@@ -1,3 +1,9 @@
 (function () {
-  $('#contact-form').validate();
+  $('#contact-form').validate({
+    rules: {
+      phone: {
+        number: true
+      }
+    }
+  });
 })();
