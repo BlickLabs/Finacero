@@ -53,7 +53,7 @@ module.exports = {
   },
   etc: {
     domain: '',
-    projectName: 'FinACERO',
+    projectName: 'Finacero',
     formattedName: package
   }
 };
