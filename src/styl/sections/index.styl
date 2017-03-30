@@ -1,6 +1,6 @@
 .home-hero
   background-image url('../img/backgrounds/home-hero.jpg')
-  height calc(95vh - 72px)
+  height calc(100vh - 55px)
   min-height 400px
 
   @media screen and (orientation: portrait)
@@ -9,7 +9,8 @@
 
 .home-hero__inner
   color white
-  width 86%
+  width calc(100% - 120px)
+  padding-top remify(20)
 
   .site-button
     padding 0.8em 1.7em
@@ -278,6 +279,10 @@
     .home-benefits__item-icon
       margin-top remify(50) !important
       margin-bottom remify(30) !important
+
+@media screen and (max-width: 1000px)
+  .home-hero__inner
+    width 86%
 
 @media screen and (max-width: 767px)
   .home-benefits__item-content
