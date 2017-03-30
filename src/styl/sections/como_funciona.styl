@@ -54,6 +54,80 @@
   flex-basis 50%
   min-height 28.75vw
 
+.how-it-works__infograph
+  display flex
+  flex-wrap wrap
+  center-block()
+  padding remify(80) 0
+  width 90%
+  max-width 940px
+  position relative
+
+.how-it-works__infograph-item
+  flex-basis 25%
+  text-align center
+
+  &:first-child .how-it-works__infograph-item-description
+    max-width 149px
+
+  &:nth-child(4)::after
+    flex-basis 100%
+    content ' '
+    width 75%
+    height remify(35)
+    border-width 0 1px 1px 0
+    border-style solid
+    border-color #bdbdbd
+    margin-top remify(28)
+    position absolute
+    transform translateX(-50%)
+    left 50%
+    display block
+
+  &:nth-child(5)::before
+    content ' '
+    position absolute
+    top 0
+    right 50%
+    height remify(37.5)
+    width 1px
+    background #bdbdbd
+    transform translate(50%, -170%)
+
+  &:nth-child(n + 5)
+    margin-top remify(110)
+
+  &:nth-child(n + 1):not(:nth-child(4)):not(:last-child)
+    position relative
+
+    &::after
+      content ' '
+      background #bdbdbd
+      width remify(100)
+      height 1px
+      display block
+      position absolute
+      right 0
+      top remify(49)
+      transform translateX(50%)
+
+.how-it-works__infograph-item-icon
+  display inline-block
+  width remify(100)
+
+.how-it-works__infograph-item-description
+  color #afafaf
+  line-height 1.25
+  font-size remify(14)
+  display block
+  center-block()
+  max-width 170px
+  margin-top remify(20)
+  text-transform uppercase
+
+  .green-text
+    font-weight $bold
+
 @media screen and (max-width: 767px)
   .how-it-works__content-wrapper
     margin-bottom 0
