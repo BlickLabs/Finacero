@@ -103,7 +103,7 @@
     &::after
       content ' '
       background #bdbdbd
-      width remify(100)
+      width 7vw
       height 1px
       display block
       position absolute
@@ -139,3 +139,44 @@
   .how-it-works__content-cover
     height 28.75vw
     min-height 160px
+
+@media screen and (max-width: 750px)
+  .how-it-works__infograph-item
+    flex-basis 50%
+
+    &:nth-child(n+1):nth-child(2n):not(:last-child)
+      position relative
+
+      &::after
+        flex-basis 100%
+        background transparent
+        width 100%
+        height remify(35)
+        border-width 0 1px 1px 0
+        border-style solid
+        border-color #bdbdbd
+        margin-top remify(28)
+        position absolute
+        top initial
+        transform translateX(-100%)
+        left 50%
+        display block
+
+    &:nth-child(2n+1):not(:first-child):before
+      content ' '
+      position absolute
+      top 0
+      right 50%
+      height remify(37.5)
+      width 1px
+      background #bdbdbd
+      transform translate(50%, -170%)
+
+    &:nth-child(n + 3)
+      margin-top remify(126)
+
+  .how-it-works__infograph-item-description
+    max-width none
+    width 66%
+    min-width 130px
+    height 3em
