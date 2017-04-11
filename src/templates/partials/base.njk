@@ -3,12 +3,26 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    {% block meta %}{% endblock %}
+    <title>{% if section != 'index' %}{% block title %}{% endblock %} - {% endif %}{{ projectName }}</title>
     {% block extra_css %}{% endblock %}
     <link rel="stylesheet" href="css/{{ projectFilesName }}.libs.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <title>{% if section != 'index' %}{% block title %}{% endblock %} - {% endif %}{{ projectName }}</title>
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+    {% block meta %}{% endblock %}
+    <meta name="description" content="Soluciones en financiamiento para la industria acerera. Con nuestra experiencia, compromiso e innovación, le ofrecemos la mejor y más rápida solución que se adapta a las necesidades de su negocio." />
+    <meta name="author" content="Finacero">
+    <meta property="og:site_name" content="Finacero">
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://finacero.mx/">
+    <meta property="og:title" content="Finacero"/>
+    <meta property="og:description" content="Soluciones en financiamiento para la industria acerera. Con nuestra experiencia, compromiso e innovación, le ofrecemos la mejor y más rápida solución que se adapta a las necesidades de su negocio."/>
+    <meta property="og:image" content="/img/backgrounds/how-it-works.jpg"/>
+    <meta property="og:image:type" content="image/jpeg"/>
   </head>
   <body>
     <div id="page">
