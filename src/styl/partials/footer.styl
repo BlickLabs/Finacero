@@ -1,0 +1,44 @@
+footer
+  background-image url('../img/backgrounds/footer.jpg')
+  padding remify(79) 0 remify(67) 0
+
+.footer-inner
+  display flex
+  width 90%
+  flex-wrap wrap
+  center-block()
+  justify-content space-between
+
+.footer-logo img
+  width remify(230)
+
+.footer-links
+  display flex
+  flex-wrap wrap
+  align-items center
+
+  a
+    color white
+    font-size remify(14)
+    text-transform uppercase
+    letter-spacing remify(3)
+
+  a:not(:first-child)
+    margin-left remify(40)
+
+  img
+    width remify(30)
+
+@media screen and (max-width: 767px)
+  .footer-logo
+    flex-basis 100%
+    text-align center
+
+  .footer-links
+    flex-basis 100%
+    margin-top remify(50)
+    justify-content center
+
+@media screen and (max-width: 430px)
+  .footer-links a:not(:first-child)
+    margin-left remify(28)

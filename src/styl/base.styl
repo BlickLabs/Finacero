@@ -5,13 +5,15 @@ html
   font-size unit($baseFontSize, 'px')
 
   @media screen and (max-width: 768px)
-    font-size 14px
+    font-size 14.5px
 
   @media screen and (max-width: 480px)
-    font-size 12px
+    font-size 13px
 
 body
+  font-family 'TomaSans'
   font-size inherit
+  font-weight $regular
 
   .noscroll
     overflow hidden
@@ -84,6 +86,19 @@ input, textarea, button, select
 textarea
   resize none
 // END FORMS //
+
+.site-button
+  color white
+  text-transform uppercase
+  letter-spacing 0.0666666em
+  background $buttonBg
+  display inline-block
+  transition background 0.2s
+
+  &:hover,
+  &:active,
+  &:focus
+    background lightness($buttonBg, 32%)
 
 @import 'partials/navbar'
 

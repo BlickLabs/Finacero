@@ -1,54 +1,97 @@
 nav
-  background white
+  background transparent
   display flex
   align-items center
-  height 78px // Change
+  height 111px
   left 0
+  padding 0 remify(60)
   position fixed
   top 0
   width 100%
   z-index 12
+
+  &:not(.sections-nav)
+    &::before
+      content ' '
+      position fixed
+      height inherit
+      left 0
+      top 0
+      width 100%
+      z-index -1
+      transition opacity 0.2s
+
+    &:not(.fixed)::before
+      opacity 0
+
+    &.fixed::before
+      opacity 1
+
+  &:not(.sections-nav)::before,
+  &.sections-nav
+    background-image url('../img/backgrounds/navbar.jpg')
+    background-size cover
+    background-position center
 
   .menu-trigger,
   .mobile-logo-container
     display none
 
   .menu-trigger
-    color white // Change
+    color white
 
   .desktop-logo-container
-    padding-top remify(5) // Change
 
     img
-      width remify(150) // Change
+      width remify(223)
 
   .menu-container
     flex-grow 1
-    font-size remify(19) // Change
+    font-size 14px
+    letter-spacing 3px
     text-align right
+    text-transform uppercase
     height 100%
 
   .menu
     height 100%
+    display flex
+    align-items center
+    justify-content flex-end
 
   .menu-link
+    color white
     display inline-block
     vertical-align middle
-    line-height 74px // Change
+    simple-border('bottom', 3px, transparent)
+    padding 0 3px
+    text-align center
+    padding-bottom 4px
 
     &:hover, &.active
-      color white // Change
+      simple-border('bottom', 3px, #9d9d9d)
 
-@media screen and (max-width: 876px) // Change
+    &:not(:first-child)
+      margin-left 29px
+
+@media screen and (max-width: 1000px)
+  nav
+    padding 0 remify(30)
+
+@media screen and (max-width: 920px) // Change
   nav
     justify-content space-between
-    height 56px // Change
-    padding 0 18px // CHange
+    height 65px
+    padding 0 18px
+
+    .desktop-logo-container img
+      height 17px
+      width auto
 
     .mobile-logo-container
       display block
       center-block()
-      width 70% // Change
+      width 70%
 
       img
         width 100%
@@ -56,26 +99,30 @@ nav
     .menu-trigger
       display block
       float right
-      margin 18px 0 // Change
-      font-size 18px // Change
+      font-size 18px
 
     .menu-container
-      background white // Change
+      background #233045
       height 100vh
       margin-right 0
       overflow-y auto
       position fixed
+      font-size 12.5px
+      letter-spacing 2px
       right -280px
       top 0
       transition right 0.2s
       width 280px
-      padding-top 25px // Change
+      padding-top 40px
 
       &.show-menu
+        box-shadow 0 0 10px black
         right 0
 
       .menu
-        margin-top 30px // Change
+        margin-bottom 30px
+        margin-top 40px
+        display block
         text-align left
         height auto
 
@@ -84,3 +131,12 @@ nav
         display block
         height auto
         line-height 1
+        border-bottom none
+        margin-left 0
+        text-align left
+        padding 1.3em 3em
+
+        &:hover,
+        &.active
+          background rgba(white, 0.08)
+          simple-border('left', 5px, #9d9d9d)
